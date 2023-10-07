@@ -1,13 +1,13 @@
 import axios from "axios";
 
-export default ({url,method,body,stateContext,onSuccess}) => {
+export default ({url,method,stateContext,onSuccess}) => {
     const config={
         headers:{
             'Content-Type':'application/json'
         },
         withCredentials: true
     };
-    const doRequest = async () => {
+    const doRequest = async (body) => {
         try{
             const response=await axios[method](url,body,config);
             stateContext.dispatch({

@@ -16,6 +16,16 @@ export default function DoctorSignin(){
         email:"",
         password:""
       });
+
+      const doRequest = useCustomRequest({
+        url:"/api/users/doctor/signin",
+        method:"post",
+        stateContext:stateContext,
+        onSuccess : () => {
+          Router.push("/doctor/dashboard");
+          
+        }
+      });
       
       const {email,password} = formData;
     
@@ -24,17 +34,7 @@ export default function DoctorSignin(){
       const login = async (email,password) => {
 
       const body = JSON.stringify({email,password});
-      const doRequest = useCustomRequest({
-        url:"/api/users/doctor/signin",
-        method:"post",
-        body:body,
-        stateContext:stateContext,
-        onSuccess : () => {
-          Router.push("/doctor/dashboard");
-        }
-      });
-          await doRequest();
-          
+          await doRequest(body);    
       }
     
       const onSubmit = (e) => {

@@ -1,7 +1,7 @@
 import { useContext,useState} from "react";
 import { StateContext } from "../_app";
 import Router from 'next/router';
-import useRequest from "../../hooks/useRequest";
+import useCustomRequest from "../../hooks/useCustomRequest";
 import Link from "next/link";
 import { login } from "../../utils/auth";
 import { LockClosedIcon } from '@heroicons/react/solid';
@@ -24,7 +24,7 @@ export default function DoctorSignin(){
       const login = async (email,password) => {
 
       const body = JSON.stringify({email,password});
-      const doRequest = useRequest({
+      const doRequest = useCustomRequest({
         url:"/api/users/doctor/signin",
         method:"post",
         body:body,

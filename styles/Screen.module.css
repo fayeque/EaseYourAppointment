@@ -1,0 +1,554 @@
+
+  
+.index {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .index .div3 {
+    background-color: #ffffff;
+    /* height: 812px; */
+    position: relative;
+    width: 375px;
+  }
+  
+  .index .toolbar {
+    height: 42px;
+    left: 20px;
+    position: absolute;
+    top: 66px;
+    width: 335px;
+  }
+  
+  .index .divWrapper {
+    height: 38px;
+    left: 0;
+    position: absolute;
+    top: 2px;
+    width: 199px;
+  }
+  
+  .index .textWrapper {
+    color: #181926;
+    font-family: var(--h2-font-family);
+    font-size: var(--h2-font-size);
+    font-style: var(--h2-font-style);
+    font-weight: var(--h2-font-weight);
+    left: 0;
+    letter-spacing: var(--h2-letter-spacing);
+    line-height: var(--h2-line-height);
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    width: 197px;
+  }
+  
+  .index .iconWrapper {
+    background-color: #f7f8fa;
+    border-radius: 21px;
+    height: 42px;
+    left: 293px;
+    position: absolute;
+    top: 0;
+    width: 42px;
+  }
+  
+  .index .icon {
+    height: 24px;
+    left: 9px;
+    position: absolute;
+    top: 9px;
+    width: 24px;
+  }
+  
+  .index .tabInstance {
+    left: 20px !important;
+    position: absolute !important;
+    top: 132px !important;
+  }
+  
+  .index .designComponentInstanceNode {
+    font-family: "Urbanist", Helvetica !important;
+    font-size: 14px !important;
+    font-style: unset !important;
+    font-weight: 700 !important;
+    height: 23px !important;
+    letter-spacing: 0 !important;
+    line-height: 18px !important;
+  }
+  
+  .index .tab-3 {
+    color: #1d1d25 !important;
+    font-family: var(--paragraph-font-family) !important;
+    font-size: var(--paragraph-font-size) !important;
+    font-style: var(--paragraph-font-style) !important;
+    font-weight: var(--paragraph-font-weight) !important;
+    height: 21px !important;
+    letter-spacing: var(--paragraph-letter-spacing) !important;
+    line-height: var(--paragraph-line-height) !important;
+  }
+  
+  .index .appt {
+    height: 150px;
+    left: 20px;
+    position: absolute;
+    /* top: 204px; */
+    width: 335px;
+  }
+  
+  .index .overlap {
+    background-image: url(https://cdn.animaapp.com/projects/650eeed12e4e252d8d5cdd86/releases/650eef1c53064f584d318e63/img/rectangle.svg);
+    /* background-size: 100% 100%; */
+    /* height: 350px; */
+    left: -20px;
+    position: relative;
+    top: -60px;
+    width: 375px;
+  }
+  
+  .index .rectangle {
+    height: 118px;
+    left: 20px;
+    position: absolute;
+    top: 76px;
+    width: 4px;
+  }
+  
+  .index .moreVertical {
+    height: 24px;
+    left: 315px;
+    position: absolute;
+    top: 83px;
+    width: 24px;
+  }
+  
+  .index .group2 {
+    height: 38px;
+    left: 36px;
+    position: absolute;
+    top: 76px;
+    width: 187px;
+  }
+  
+  .index .frame {
+    align-items: center;
+    border-radius: 6px;
+    display: inline-flex;
+    gap: 8px;
+    left: 0;
+    position: absolute;
+    top: 22px;
+  }
+  
+  .index .clock {
+    height: 16px;
+    position: relative;
+    width: 16px;
+  }
+  
+  .index .textWrapper2 {
+    color: #1d1d25;
+    font-family: var(--small-button-font-family);
+    font-size: var(--small-button-font-size);
+    font-style: var(--small-button-font-style);
+    font-weight: var(--small-button-font-weight);
+    letter-spacing: var(--small-button-letter-spacing);
+    line-height: var(--small-button-line-height);
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .index .ellipse {
+    background-color: #1d1d25;
+    border-radius: 2px;
+    height: 4px;
+    opacity: 0.5;
+    position: relative;
+    width: 4px;
+  }
+  
+  .index .textWrapper3 {
+    color: #1d1d25;
+    font-family: var(--small-text-font-family);
+    font-size: var(--small-text-font-size);
+    font-style: var(--small-text-font-style);
+    font-weight: var(--small-text-font-weight);
+    left: 0;
+    letter-spacing: var(--small-text-letter-spacing);
+    line-height: var(--small-text-line-height);
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+  }
+  
+  .index .group3 {
+    height: 48px;
+    left: 36px;
+    position: absolute;
+    top: 146px;
+    width: 197px;
+  }
+  
+  .index .overlapGroup2 {
+    height: 48px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 52px;
+  }
+  
+  .index .img {
+    height: 48px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 48px;
+  }
+  
+  .index .videoWrapper {
+    background-color: var(--green);
+    border-radius: 9px;
+    height: 18px;
+    left: 34px;
+    position: absolute;
+    top: 30px;
+    width: 18px;
+  }
+  
+  .index .video {
+    height: 11px;
+    left: 4px;
+    position: absolute;
+    top: 4px;
+    width: 11px;
+  }
+  
+  .index .group4 {
+    height: 43px;
+    left: 64px;
+    position: absolute;
+    top: 3px;
+    width: 137px;
+  }
+  
+  .index .textWrapper4 {
+    color: var(--grey);
+    font-family: var(--paragraph-font-family);
+    font-size: var(--paragraph-font-size);
+    font-style: var(--paragraph-font-style);
+    font-weight: var(--paragraph-font-weight);
+    left: 0;
+    letter-spacing: var(--paragraph-letter-spacing);
+    line-height: var(--paragraph-line-height);
+    position: absolute;
+    top: 21px;
+    white-space: nowrap;
+  }
+  
+  .index .textWrapper5 {
+    color: #1d1d25;
+    font-family: var(--title-font-family);
+    font-size: var(--title-font-size);
+    font-style: var(--title-font-style);
+    font-weight: var(--title-font-weight);
+    left: 0;
+    letter-spacing: var(--title-letter-spacing);
+    line-height: var(--title-line-height);
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+  }
+  
+  .index .line {
+    height: 1px;
+    left: 36px;
+    object-fit: cover;
+    position: absolute;
+    top: 129px;
+    width: 303px;
+  }
+  
+  .index .overlap-wrapper {
+    height: 150px;
+    left: 20px;
+    position: absolute;
+    top: 370px;
+    width: 335px;
+  }
+  
+  .index .overlap-2 {
+    background-image: url(https://cdn.animaapp.com/projects/650eeed12e4e252d8d5cdd86/releases/650eef1c53064f584d318e63/img/rectangle-2.svg);
+    background-size: 100% 100%;
+    height: 350px;
+    left: -20px;
+    position: relative;
+    top: -60px;
+    width: 375px;
+  }
+  
+  .index .group-5 {
+    height: 38px;
+    left: 36px;
+    position: absolute;
+    top: 76px;
+    width: 180px;
+  }
+  
+  .index .group-6 {
+    height: 48px;
+    left: 36px;
+    position: absolute;
+    top: 146px;
+    width: 180px;
+  }
+  
+  .index .group-7 {
+    height: 44px;
+    left: 64px;
+    position: absolute;
+    top: 2px;
+    width: 120px;
+  }
+  
+  .index .text-wrapper-6 {
+    color: var(--grey);
+    font-family: var(--paragraph-font-family);
+    font-size: var(--paragraph-font-size);
+    font-style: var(--paragraph-font-style);
+    font-weight: var(--paragraph-font-weight);
+    left: 0;
+    letter-spacing: var(--paragraph-letter-spacing);
+    line-height: var(--paragraph-line-height);
+    position: absolute;
+    top: 22px;
+    white-space: nowrap;
+  }
+  
+  .index .overlap-group-wrapper {
+    height: 150px;
+    left: 20px;
+    position: absolute;
+    top: 536px;
+    width: 335px;
+  }
+  
+  .index .overlap-3 {
+    background-image: url(https://cdn.animaapp.com/projects/650eeed12e4e252d8d5cdd86/releases/650eef1c53064f584d318e63/img/rectangle-4.svg);
+    background-size: 100% 100%;
+    height: 336px;
+    left: -20px;
+    position: relative;
+    top: -60px;
+    width: 375px;
+  }
+  
+  .index .group-8 {
+    height: 48px;
+    left: 36px;
+    position: absolute;
+    top: 146px;
+    width: 174px;
+  }
+  
+  .index .group-9 {
+    height: 44px;
+    left: 64px;
+    position: absolute;
+    top: 2px;
+    width: 114px;
+  }
+  
+  .index .iphone-x-status-bars {
+    height: 44px;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 375px;
+  }
+  
+  .index .iphone-x-status-bars-2 {
+    height: 44px;
+    position: relative;
+  }
+  
+  .index .battery {
+    height: 11px;
+    left: 336px;
+    position: absolute;
+    top: 17px;
+    width: 24px;
+  }
+  
+  .index .capacity-wrapper {
+    border: 1px solid;
+    border-color: #00000059;
+    border-radius: 2.67px;
+    height: 11px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 22px;
+  }
+  
+  .index .capacity {
+    background-color: #000000;
+    border-radius: 1.33px;
+    height: 7px;
+    left: 1px;
+    position: relative;
+    top: 1px;
+    width: 18px;
+  }
+  
+  .index .cap {
+    height: 4px;
+    left: 23px;
+    position: absolute;
+    top: 4px;
+    width: 1px;
+  }
+  
+  .index .wifi {
+    height: 11px;
+    left: 316px;
+    position: absolute;
+    top: 17px;
+    width: 15px;
+  }
+  
+  .index .cellular-connection {
+    height: 11px;
+    left: 294px;
+    position: absolute;
+    top: 18px;
+    width: 17px;
+  }
+  
+  .index .time-style {
+    height: 21px;
+    left: 21px;
+    position: absolute;
+    top: 13px;
+    width: 44px;
+  }
+  
+  .index .time {
+    color: #000000;
+    font-family: "Inter", Helvetica;
+    font-size: 14px;
+    font-weight: 700;
+    left: 2px;
+    letter-spacing: -0.28px;
+    line-height: 16px;
+    position: absolute;
+    text-align: center;
+    top: 1px;
+    width: 40px;
+  }
+  
+  .index .nav-bar {
+    height: 80px;
+    left: 0;
+    position: fixed;
+    top: 732px;
+    width: 375px;
+  }
+  
+  .index .overlap-4 {
+    height: 80px;
+    position: relative;
+  }
+  
+  .index .nav {
+    height: 80px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 375px;
+  }
+  
+  .index .rectangle-2 {
+    height: 80px;
+    left: 667px;
+    position: absolute;
+    top: -326px;
+    width: 375px;
+  }
+  
+  .index .home {
+    height: 24px;
+    left: 26px;
+    position: absolute;
+    top: 19px;
+    width: 24px;
+  }
+  
+  .index .appointment {
+    height: 24px;
+    left: 101px;
+    position: absolute;
+    top: 19px;
+    width: 24px;
+  }
+  
+  .index .profile {
+    background-image: url(https://cdn.animaapp.com/projects/650eeed12e4e252d8d5cdd86/releases/650eef1c53064f584d318e63/img/user-circle-2.svg);
+    background-size: 100% 100%;
+    height: 24px;
+    left: 326px;
+    position: absolute;
+    top: 19px;
+    width: 24px;
+  }
+  
+  .index .message {
+    height: 24px;
+    left: 251px;
+    position: absolute;
+    top: 19px;
+    width: 24px;
+  }
+  
+  .index .vector-wrapper {
+    background-color: #173e78;
+    border-radius: 24px;
+    height: 48px;
+    left: 164px;
+    position: absolute;
+    top: 7px;
+    width: 48px;
+  }
+  
+  .index .vector {
+    height: 16px;
+    left: 16px;
+    position: absolute;
+    top: 16px;
+    width: 16px;
+  }
+  
+  .index .iphone-x-home {
+    height: 21px;
+    left: 0;
+    position: absolute;
+    top: 59px;
+    width: 375px;
+  }
+  
+  .index .rectangle-3 {
+    background-color: var(--dark);
+    border-radius: 100px;
+    height: 5px;
+    left: 121px;
+    position: relative;
+    top: 8px;
+    width: 134px;
+  }
+  

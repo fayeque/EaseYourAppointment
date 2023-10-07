@@ -1,11 +1,8 @@
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.css';
 import React, { useReducer, useState } from 'react';
-// import buildClient from '../api/build-client.js';
 import Header from '../components/header';
 import { AppWrapper } from '../context/state';
-// import "../styles.css";
-// import error from '../components/error';
 import Alert from '../components/alert';
 import 'tailwindcss/tailwind.css'
 import '../styles/roots.css';

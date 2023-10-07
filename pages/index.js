@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import axios from 'axios'
-// import buildClient from '../api/build-client'; 
 import Link from "next/link";
 import { getError } from '../components/error';
 import { StateContext } from './_app';

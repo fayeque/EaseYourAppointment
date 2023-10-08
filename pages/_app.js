@@ -64,7 +64,7 @@ const reducer = (state,action) => {
 const AppComponent = ({ Component,pageProps}) => {
   const [count,dispatch] = useReducer(reducer,initialState);
   // console.log("initial state in -app",initialState);
-  axios.defaults.baseURL="https://easeyourappointmentbackend.onrender.com";
+  axios.defaults.baseURL="http://localhost:3000";//"https://easeyourappointmentbackend.onrender.com";
   axios.defaults.withCredentials=true;
   axios.defaults.headers={
     'Content-Type':'application/json'

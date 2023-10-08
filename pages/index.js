@@ -118,8 +118,8 @@ export default function Home(props) {
 export async function getStaticProps() {
   console.log("executing on server");
   const { data } = await axios.get(
-    'http://localhost:3000/api/users/allDoctors'
-    //'https://easeyourappointmentbackend.onrender.com/api/users/allDoctors'
+   // 'http://localhost:3000/api/users/allDoctors'
+    'https://easeyourappointmentbackend.onrender.com/api/users/allDoctors'
     );
 
 

@@ -16,33 +16,41 @@ export default function Home(props) {
   useEffect(() => {
     async function getUser(){
       try{
-        const config={
-          headers:{
-              'Content-Type':'application/json'
-          },
-          withCredentials: true
-      }
+      //   const config={
+      //     headers:{
+      //         'Content-Type':'application/json',
+      //         'Authorization':`Bearer ${JSON.parse(localStorage.getItem('currentUser'))?.jwtToken}`
+      //     },
+      //     withCredentials: true
+      // }
           
-          const {data} = await axios.get("/api/users/currentUser",config);
-          console.log("data in index.js " ,data.currentUser);
-          if(!data.currentUser){
-              stateContext.dispatch({
-                  type:'unauthenticate',
-                  payload:null
-              });
-          }else{
-              stateContext.dispatch({
-                  type:'authenticate',
-                  payload:data.currentUser
-              });
-              if(data.currentUser.userRole == 1){
-                Router.push("/doctor/dashboard");
-              }
-          }
+          // const {data} = await axios.get("/api/users/currentUser"
+          // // ,config
+          // );
+          // console.log("data in index.js " ,data.currentUser);
+          // if(!data.currentUser){
+          //     stateContext.dispatch({
+          //         type:'unauthenticate',
+          //         payload:null
+          //     });
+          // }else{
+          //     stateContext.dispatch({
+          //         type:'authenticate',
+          //         payload:data.currentUser
+          //     });
+          //     if(data.currentUser.userRole == 1){
+          //       Router.push("/doctor/dashboard");
+          //     }
+          // }
           
+         const userDetail = JSON.parse(localStorage.getItem('currentUser'))?.jwtToken ;
+
+         if(userDetail.userRole == 1){
+          Router.push("/doctor/dashboard");
+         }
 
       }catch(err){
-          console.log(err);
+          console.log("error coming in index.js " + err);
       }
   }
   getUser();
@@ -117,9 +125,16 @@ export default function Home(props) {
 
 export async function getStaticProps() {
   console.log("executing on server");
+          const config={
+          headers:{
+              'Content-Type':'application/json',
+              'Authorization':'Bearer '
+          }
+      }
   const { data } = await axios.get(
-   // 'http://localhost:3000/api/users/allDoctors'
-    'https://easeyourappointmentbackend.onrender.com/api/users/allDoctors'
+  //  'http://localhost:3000/api/users/allDoctors'
+     'https://easeyourappointmentbackend.onrender.com/api/users/allDoctors'
+    ,config
     );
 
 
@@ -130,7 +145,7 @@ export async function getStaticProps() {
 
   return {
     props: { data } ,// will be passed to the page component as props
-    revalidate: 180
+    revalidate: 10
   }
 }
 

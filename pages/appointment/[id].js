@@ -18,28 +18,37 @@ export default function Appointment(){
     useEffect(() => {
         async function getUser(){
             try{
-              const config={
-                headers:{
-                    'Content-Type':'application/json'
-                },
-                withCredentials: true
-            }
-                const {data} = await axios.get("/api/users/currentUser",config);
-                console.log("Data in appointment",data);
-                if(!data.currentUser){
-                    Router.push("/");
-                    stateContext.dispatch({
-                        type:'unauthenticate',
-                        payload:""
-                    });
+            //   const config={
+            //     headers:{
+            //         'Content-Type':'application/json'
+            //     },
+            //     withCredentials: true
+            // }
+                // const {data} = await axios.get("/api/users/currentUser"
+                // // ,config
+                // );
+                // console.log("Data in appointment",data);
+                // if(!data.currentUser){
+                //     Router.push("/");
+                //     stateContext.dispatch({
+                //         type:'unauthenticate',
+                //         payload:""
+                //     });
 
-                    showErrorAlert(stateContext.dispatch,'setErrors',[{message:'Please login first'}])
+                //     showErrorAlert(stateContext.dispatch,'setErrors',[{message:'Please login first'}])
                     
-                }else{
-                    stateContext.dispatch({
-                        type:'authenticate',
-                        payload:data.currentUser
-                    });
+                // }else{
+                //     stateContext.dispatch({
+                //         type:'authenticate',
+                //         payload:data.currentUser
+                //     });
+                // }
+
+                const userDetail = JSON.parse(localStorage.getItem('currentUser'))?.jwtToken ;
+
+                if(!userDetail){
+                  showErrorAlert(stateContext.dispatch,'setErrors',[{message:'Please login first'}]);
+                  Router.push("/");
                 }
                 
 

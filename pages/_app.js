@@ -18,7 +18,7 @@ const initialState = {
 
 if(typeof window !== 'undefined'){
  initialState = {
-  currentUser:localStorage.getItem("currentUser"),
+  currentUser:JSON.parse(localStorage.getItem("currentUser")),
   errors:null,
   succes:null
 }
@@ -31,13 +31,15 @@ const reducer = (state,action) => {
   console.log("payload in _app",payload);
   switch(type){
     case 'authenticate':
-      localStorage.setItem("currentUser",payload);
+      localStorage.setItem("currentUser",JSON.stringify(payload));
+      //localStorage.setItem("token",payload.jwtToken);
       return {
         ...state,
         currentUser:payload
       };
     case 'unauthenticate':
       localStorage.removeItem('currentUser');
+      //localStorage.removeItem('token');
       return {
         ...state,
         currentUser:null
@@ -64,10 +66,13 @@ const reducer = (state,action) => {
 const AppComponent = ({ Component,pageProps}) => {
   const [count,dispatch] = useReducer(reducer,initialState);
   // console.log("initial state in -app",initialState);
-  axios.defaults.baseURL="https://easeyourappointmentbackend.onrender.com"; //"http://localhost:3000";
+  axios.defaults.baseURL="http://localhost:3000"; //"https://easeyourappointmentbackend.onrender.com"; //
   axios.defaults.withCredentials=true;
+  const token = typeof window != 'undefined' ? JSON.parse(localStorage.getItem('currentUser'))?.jwtToken : null; 
+  console.log("token at client side " , token);
   axios.defaults.headers={
-    'Content-Type':'application/json'
+    'Content-Type':'application/json',
+    'Authorization': `Bearer ${token}`
 };
   // console.log(pageProps);
   return (

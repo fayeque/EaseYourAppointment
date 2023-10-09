@@ -19,16 +19,19 @@ import { useForm } from "../../hooks/useForm";
 
 
       const login = async (email,password) => {
-        const config={
-          headers:{
-              'Content-Type':'application/json'
-          },
-          withCredentials: true
-      }
+      //   const config={
+      //     headers:{
+      //         'Content-Type':'application/json',
+      //         'Authorization':`Bearer ${JSON.parse(localStorage.getItem('currentUser'))?.jwtToken}`
+      //     },
+      //     withCredentials: true
+      // }
       const body = JSON.stringify({email,password});
   
       try{
-          const response=await axios.post("/api/users/patient/signin",body,config);
+          const response=await axios.post("/api/users/patient/signin",body
+          // ,config
+          );
           stateContext.dispatch({
               type:'authenticate',
               payload:response.data

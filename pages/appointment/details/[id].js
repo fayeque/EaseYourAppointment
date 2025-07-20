@@ -73,7 +73,7 @@ export default function Details(){
                         Appointment Queue Details
                     </h1>
                     <p className="text-lg text-gray-600">
-                        Real-time status of all patients in today's queue
+                        Real-time status of all patients in today&apos;s queue
                     </p>
                 </div>
 

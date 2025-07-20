@@ -2,14 +2,14 @@ import axios from "axios";
 import { useContext } from "react";
 import {StateContext} from "../pages/_app";
 
-export async function login(email,password){
+export async function login(mobile,password){
     const stateContext = useContext(StateContext);
     const config={
         headers:{
             'Content-Type':'application/json'
         }
     }
-    const body = JSON.stringify({email,password});
+    const body = JSON.stringify({mobile,password});
 
     try{
         const res=await axios.post("/users/patient/signin",body,config);

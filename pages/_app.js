@@ -66,7 +66,7 @@ const reducer = (state,action) => {
 const AppComponent = ({ Component,pageProps}) => {
   const [count,dispatch] = useReducer(reducer,initialState);
   // console.log("initial state in -app",initialState);
-  axios.defaults.baseURL="https://easeyourappointmentbackend.onrender.com"; //"" "https://easeyourappointmentbackend.onrender.com"
+  axios.defaults.baseURL="https://easeyourappointmentbackend.onrender.com"; //"http://localhost:3000";
   axios.defaults.withCredentials=true;
   const token = typeof window != 'undefined' ? JSON.parse(localStorage.getItem('currentUser'))?.jwtToken : null; 
   console.log("token at client side " , token);

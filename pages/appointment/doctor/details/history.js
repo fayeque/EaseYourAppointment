@@ -29,6 +29,12 @@ export default function Dashboard(){
                     type:'setErrors',
                     payload:[{message:"Please login first"}]
                 });
+                setTimeout(() => {
+                  stateContext.dispatch({
+                    type:'removeErrors',
+                    payload:null
+                  })
+                },2000)
                 Router.push("/auth/doctorSignin");
             }
         }

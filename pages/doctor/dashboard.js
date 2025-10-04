@@ -8,6 +8,7 @@ import Link from "next/link";
 export default function Dashboard(){
     const stateContext = useContext(StateContext);
     const [appn,setAppn] = useState([]);
+    const doctorId = stateContext.count.currentUser?.id;
     useEffect(() => {
         async function getData(){
           const config={
@@ -41,6 +42,7 @@ export default function Dashboard(){
         return new Date(d);
     }
 
+
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-10 px-4 flex flex-col items-center">
             <div className="w-full max-w-4xl">
@@ -55,12 +57,40 @@ export default function Dashboard(){
 
                 {/* Appointments Table Card */}
                 <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-                    <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-4">
-                        <h2 className="text-xl font-semibold text-white flex items-center gap-2">
-                            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                            Appointments
-                        </h2>
+                  <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-4 flex items-center justify-between">
+  {/* Left side: heading */}
+                     <h2 className="text-xl font-semibold text-white flex items-center gap-2">
+            <svg
+      className="w-6 h-6 text-white"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+      />
+    </svg>
+    Appointments
+  </h2>
+
+  {/* Right side: buttons */}
+  <div className="flex gap-3">
+    <Link href="/appointment/[id]" as={`/appointment/${doctorId}`}>
+      <a className="px-4 py-2 bg-white text-blue-600 font-medium rounded-lg shadow hover:bg-gray-100 transition">
+        Offline Appointment
+      </a>
+    </Link>
+    <Link href="/appointment/doctor/details/pendingApproval">
+      <a className="px-4 py-2 bg-indigo-500 text-white font-medium rounded-lg shadow hover:bg-indigo-600 transition">
+        Approve Appointments
+      </a>
+    </Link>
+  </div>
                     </div>
+
                     <div className="overflow-x-auto">
                         <table className="min-w-full divide-y divide-gray-200">
                             <thead className="bg-gray-50">

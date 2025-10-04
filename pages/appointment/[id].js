@@ -66,13 +66,24 @@ export default function Appointment(){
         }
         const body = JSON.stringify(obj);
         try{
-        var res=await axios.post(`/api/appointment/${doctorId}`,body,config);
-        console.log(res.data);
-        var obj={message:res.data};
+       
+        if(stateContext.count.currentUser.userRole == 1){
+        var res=await axios.post(`/api/doctor-appointment`,body,config);
+        console.log("data from backend is ", res.data);
+        var obj={message:res.data}; 
         var arr=[];
         arr.push(obj);
         showSuccessAlert(stateContext.dispatch,'setSuccess',arr);
-        Router.push("/");
+            Router.push("/doctor/dashboard")
+        }else{
+        var res=await axios.post(`/api/patient-appointment/${doctorId}`,body,config);
+        console.log("data from backend is ", res.data);
+        var obj={message:res.data}; 
+        var arr=[];
+        arr.push(obj);
+        showSuccessAlert(stateContext.dispatch,'setSuccess',arr);
+            Router.push("/");
+        }
         }catch(err){
             console.log(err.response);
             window.scrollTo(0,0);
